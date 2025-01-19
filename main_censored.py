@@ -17,7 +17,10 @@ async def hello(ctx):
 #command for $help1
 @bot.command()
 async def help1(ctx):
-    await ctx.send("All commands:\n$help:Show all the commands.\n$hello:I just say hello:).\n$plus:Adds two numbers and i write the answer(not added yet).\n$minus:It dose exactly what you think(not added yet)\n$multiply:It wasn't added yet")
-
+    await ctx.send("All commands:\n$help:Show all the commands.\n$hello:I just say hello:).\n$plus:Adds two numbers and i write the answer(write your numbers after $plus also with commands like $minus and $multiply).\n$minus:It dose exactly what you think(not added yet)\n$multiply:It wasn't added yet")
+#command for $plus
+@bot.command()
+async def plus(ctx, l1 = 0, l2 = 0):
+    await ctx.send(f"It equals:{l1 + l2}.")
 
 bot.run(">INSERT TOKEN HERE<")
